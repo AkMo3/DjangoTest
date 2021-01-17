@@ -24,7 +24,7 @@ jobs:
           reaction: rocket
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
-      - run: 'echo Found it!'    
+      - run: ''    
         if: steps.check.outputs.triggered == 'true'
       - name: Checkout the latest code
         uses: actions/checkout@v2
