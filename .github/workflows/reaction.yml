@@ -20,6 +20,7 @@ jobs:
       - uses: khan/pull-request-comment-trigger@master
         name: Reaction on action received
         with:
+          trigger: 'GitHub, rebase'
           reaction: rocket
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
