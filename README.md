@@ -1,1 +1,3 @@
 # DjangoTest
+
+Test GitHub Actions.
