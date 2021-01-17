@@ -18,12 +18,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: khan/pull-request-comment-trigger@master
-        name: Reaction on action received
+        name: React with rocket on run
         with:
           trigger: 'GitHub, rebase'
           reaction: rocket
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+      - run: 'echo Found it!'
         if: steps.check.outputs.triggered == 'true'
       - name: Checkout the latest code
         uses: actions/checkout@v2
