@@ -40,6 +40,7 @@ jobs:
        with:
          trigger: 'GitHub, generate report'
          reaction: rocket
+         prefix_only: true
        env:
          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
      - run: ' '
@@ -212,10 +213,10 @@ jobs:
      
       - name: Set message
         id: out
-        run: echo ::set-output name=message::$(cat message)   
-      
+        run: echo ::set-output name=message::$(cat message)
+
       - name: Comment PR
         uses: checkstyle/contribution/comment-action@master
         with:
-         message: ${{steps.out.outputs.message}}
-         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          message: ${{steps.out.outputs.message}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
