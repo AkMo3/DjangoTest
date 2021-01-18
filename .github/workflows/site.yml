@@ -33,29 +33,8 @@ jobs:
       - uses: khan/pull-request-comment-trigger@master
         name: React with rocket on run
         with:
-          trigger: 'GitHub, generate web site'
+          trigger: ' '
           reaction: rocket
-          prefix_only: true
-        env:
-          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
-      - run: ' '
-        if: steps.check.outputs.triggered == 'true'
-      - uses: khan/pull-request-comment-trigger@master
-        name: React with rocket on run
-        with:
-          trigger: 'GitHub, generate website'
-          reaction: rocket
-          prefix_only: true
-        env:
-          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
-      - run: ' '
-        if: steps.check.outputs.triggered == 'true' 
-      - uses: khan/pull-request-comment-trigger@master
-        name: React with rocket on run
-        with:
-          trigger: 'GitHub, generate site'
-          reaction: rocket
-          prefix_only: true
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
       - run: ' '
