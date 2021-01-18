@@ -22,7 +22,6 @@ jobs:
         with:
           trigger: ','
           reaction: rocket
-          prefix_only: true
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
       # Run any command for System to work
