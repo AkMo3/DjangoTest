@@ -38,7 +38,7 @@ jobs:
      - uses: khan/pull-request-comment-trigger@master
        name: React with rocket on run
        with:
-         trigger: 'GitHub, rebase'
+         trigger: 'GitHub, generate report'
          reaction: rocket
        env:
          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
