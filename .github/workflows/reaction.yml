@@ -12,7 +12,7 @@ on:
     types: [created, edited]
 name: Automatic Rebase
 jobs:
-  deploy:
+  React:
     runs-on: ubuntu-latest
     steps:
       - uses: khan/pull-request-comment-trigger@master
